@@ -36,3 +36,33 @@ h2 + p {
 .stars span {
     cursor: pointer;
 }
+
+/* [] is attribute selector */
+a[href="#"] {
+    color: tomato;
+}
+
+a[href^="http"] {
+    color: green;
+}
+
+/* State related pseudo classes */
+nav a,
+nav a:link,
+nav a:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* transition should be applied to normal state */
+    transition: transform .5s;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+nav a:active {
+    transform: scale(1.2) translatex(10px);
+}
